@@ -27,13 +27,29 @@ router.post("/", (req, res) => {
   const newVideo = {
     id: uuid(),
     title: videoObj.title,
-    channel: "Red Cow",
-    image: "https://i.imgur.com/5qyCZrD.jpg",
+    channel: "You",
+    image: "http://localhost:8080/images/Upload-video-preview.jpg",
     description: videoObj.description,
-    views: "0",
+    views: "1",
     likes: "0",
     duration: "4:01",
     timestamp: new Date(),
+    comments: [
+      {
+        id: uuid(),
+        name: "Dylan Walter",
+        comment: "Awesome Video",
+        likes: 0,
+        timestamp: new Date(),
+      },
+      {
+        id: uuid(),
+        name: "Taylor Jade",
+        comment: "Great Watch!",
+        likes: 0,
+        timestamp: new Date(),
+      },
+    ],
   };
   videoDetails.push(newVideo);
 
