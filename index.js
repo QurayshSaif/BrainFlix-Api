@@ -19,8 +19,8 @@ app.use(express.static("public"));
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get("/", (_req, res) => {
+  res.send("Testing");
 });
 
 app.use("/videos", videosRoutes);

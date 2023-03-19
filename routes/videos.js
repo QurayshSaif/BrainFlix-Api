@@ -58,6 +58,7 @@ router.post("/", (req, res) => {
   res.status(201).json(newVideo);
 });
 
+//get video by Id
 router.get("/:id", (req, res) => {
   const vid = videoDetails.find((video, i) => {
     return video.id === req.params.id;
@@ -80,7 +81,7 @@ router.post("/:id/comments", (req, res) => {
     const commentObj = req.body;
     const newComment = {
       id: uuid(),
-      name: commentObj.name,
+      name: "Anonymous",
       comment: commentObj.comment,
       likes: 0,
       timestamp: new Date(),
