@@ -28,28 +28,13 @@ router.post("/", (req, res) => {
     id: uuid(),
     title: videoObj.title,
     channel: "You",
-    image: "http://localhost:8080/images/Upload-video-preview.jpg",
+    image:
+      "https://brainflix-3qel.onrender.com//images/Upload-video-preview.jpg",
     description: videoObj.description,
     views: "1",
     likes: "0",
     duration: "4:01",
     timestamp: new Date(),
-    comments: [
-      {
-        id: uuid(),
-        name: "Dylan Walter",
-        comment: "Awesome Video",
-        likes: 0,
-        timestamp: new Date(),
-      },
-      {
-        id: uuid(),
-        name: "Taylor Jade",
-        comment: "Great Watch!",
-        likes: 0,
-        timestamp: new Date(),
-      },
-    ],
   };
   videoDetails.push(newVideo);
 
